@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    /*background: #eeeeee;*/
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+header {
+    padding: 3% 0;
+    text-align: center;
+    font-size: 28px;
+    width: 100%;
+    /*background: #0984e3;*/
+    border-bottom: 1px solid #ecf0f1;
+}
+.game {
+    padding: 0;
+    border-bottom: 1px solid #ecf0f1;
+    overflow: hidden;
+    position: relative;
+}
+.game .team-wrapper {
+    width: calc(45% - 20px - 9px);
+    padding: 2.5%;
+}
+.game .team-wrapper.home {
+    float: left;
+    text-align: right;
+    border-left: 4px solid #FFFFFF;
+}
+.game .team-wrapper.away {
+    float: right;
+    text-align: left;
+    border-right: 4px solid #FFFFFF;
+}
+.game.result-X .home,
+.game.result-X .away {
+    /*border-color: red;*/
+}
+.game:not(.result-NOTPLAYED) .home,
+.game:not(.result-NOTPLAYED) .away {
+    border-color: #dfe6e9;
+}
+
+/*.game:not(.result-NOTPLAYED):not(.result-X) .score-wrapper,*/
+.game.result-1 .home,
+.game.result-2 .away {
+    border-color: #00cec9;
+}
+.game.result-1 .away,
+.game.result-2 .home {
+    border-color: #ff7675;
+}
+
+.game .score-wrapper {
+    width: 50px;
+    float: left;
+    padding: 2.5% 0;
+    text-align: center;
+}
+.game .score-wrapper score {
+    width: 100%;
+}
+.game .score-wrapper.live .score {
+    top: -7px;
+    position: relative;
+}
+.game .score-wrapper .live {
+    position: absolute;
+    bottom: 6px;
+    background: #ff7675;
+    color: #FFFFFF;
+    width: 30px;
+    margin: 0 6px;
+    padding: 2px 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+.game .time {
+    color: #636e72;
+}
+.truncate {
+    /*width: 250px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

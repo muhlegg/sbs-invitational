@@ -1,0 +1,28 @@
+<div class="game-loop" *ngFor="let game of getGames()">
+  <div class="game result-{{game.get1X2()}}">
+
+    <div class="team-wrapper home">
+      <span class="team truncate" fittext maxFontSize="17">{{game.homeTeam}}</span>
+    </div>
+
+    <div class="score-wrapper" *ngIf="game.isPlayed()">
+      <div class="score">{{game.homeScore}} - {{game.awayScore}}</div>
+    </div>
+
+    <div class="score-wrapper live" *ngIf="game.isLive()">
+      <div class="score">{{game.homeScore}} - {{game.awayScore}}</div>
+      <div class="live">LIVE</div>
+    </div>
+
+    <div class="score-wrapper" *ngIf="game.isNotYetPlayed()">
+      <div class="time">{{game.time}}</div>
+    </div>
+
+
+    <div class="team-wrapper away">
+      <span class="team truncate" fittext maxFontSize="17">{{game.awayTeam}}</span>
+    </div>
+
+  </div>
+</div>
+
